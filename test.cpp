@@ -7,40 +7,60 @@ using namespace std;
 
 int main()
 {
-    int a [2];
+    int a[2];
+    int b[2];
+    int c;
     int answ[5][3]{
-    {0, 0, 0},
+    {1, 1, 1},
     {0, 0, 0},
     {0, 0, 0},
     {0, 0, 0},
     {0, 0, 0},
     };
-    a[0] = (rand() % 3 + 1) - 1;
-    a[1] = (rand() % 3 + 1) - 1;
-    
     srand(time(0));
+    a[0] = rand() % 3 - 1;
+    for (int i = 0; i < 3; i++) {
+        a[1] = rand() % 3;
+        cout << a[1] << endl;
+        if (i == 2 and a[1] == a[0]) {
+        cout << "AXAXAX" << endl;
+        i = 0;
+        }
+    }
+    b[0] = rand() % 3 - 1;
+    for (int i = 0; i < 3; i++) {
+        b[1] = rand() % 3;
+        cout << a[1] << endl;
+        if (i == 2 and a[1] == a[0]) {
+        cout << "AXAXAX" << endl;
+        i = 0;
+        }
+    }    
+    c = rand() % 3;
     for (int i = 0; i < 5; i++) {
         for (int j = 0;j < 3; j++){
-            if (i == 0 or i == 1){
-                answ[i][a[0]] = 1;
+            if (i == 1){
                 answ[i][a[1]] = 1;
-
+                // answ[i][a[0]] = 1;
             }
-            if (i == 2 or i == 3)
+            if (i == 2)
             {
-                cout << "дорожка 3 и 4" << endl;
+                answ[i][b[0]] = 1;
+            }
+            if (i == 3){
+                answ[i][b[1]] = 1;
             }
             if (i == 4){
-                cout << "дорожка 5" << endl;
+
             }
             
 
         }
     }
-        cout << a[0] << endl;
-        cout << a[1] << endl;
     for (int i = 0; i < 3; i++){
-        cout << answ[0][i] << endl;
-
+        for (int j = 0; j < 5; j++) {
+            cout << answ[j][i] << ' ';
+        }
+        cout << endl;    
     }
 }
