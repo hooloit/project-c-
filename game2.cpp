@@ -119,7 +119,7 @@ void  Roulette(int round1[])
             cout << "                                   " << endl;
             cout << "    12                       3     " << endl;
             cout << "                                $  " << endl;
-            cout << " 13                      _ *    4  " << endl;
+            cout << " 13                      _ >    4  " << endl;
             cout << "                    __ /           " << endl;
             cout << "14                0               5" << endl;
             cout << "                                   " << endl;
@@ -148,7 +148,7 @@ void  Roulette(int round1[])
             cout << "14                 0------>       5" << endl;
             cout << "                                   " << endl;
             cout << " 15                             6  " << endl;
-            cout << "                                   " << endl;
+            cout << "                                       " << endl;
             cout << "    16                       7     " << endl;
             cout << "                                   " << endl;
             cout << "         17               8        " << endl;
@@ -384,7 +384,7 @@ void  Roulette(int round1[])
             cout << "                                   " << endl;
             cout << " 13                             4  " << endl;
             cout << " $                                 " << endl;
-            cout << "14         <------0              5" << endl;
+            cout << "14         <------0               5" << endl;
             cout << "                                   " << endl;
             cout << " 15                             6  " << endl;
             cout << "                                   " << endl;
