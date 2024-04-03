@@ -13,7 +13,9 @@ int main()
     srand(time(0));
     int a[2];
     int b[2];
-    int c;
+    int c[5];
+    int lose;
+    int move[5];
     int answ[5][3]{
     {1, 1, 1},
     {0, 0, 0},
@@ -61,7 +63,7 @@ int main()
         i = 0;
         }
     }    
-    c = rand() % 3;
+    // c = rand() % 3;
     for (int i = 0; i < 5; i++) {
         for (int j = 0;j < 3; j++){
             if (i == 1){
@@ -86,7 +88,7 @@ int main()
 
     for (int i = 0; i < 3; i++ ) {
         for(int j = 0; j < 5; j++){
-            cout << answ[j][i] << ' ';
+            cout << '[' << i << "] " << answ[j][i] << ' ';
         }
         cout << endl;
     }
@@ -98,23 +100,50 @@ int main()
         {
             for (int k = 0; k < 5; k++)
             {
-                if(answ[k][i] == 1){
-                    cout << squarewin[j];
-                }else{
+                // if(answ[k][i] == 1){
+                //     cout << squarewin[j];
+                // }else{
                     cout << square[j];
-                }
+                // }
             }
             cout << "\n";
         }
     }
-    // cout << square[0] << square[0] << square[0] << square[0] << square[0] << endl;
-    // cout << square[1] << square[1] << square[1] << square[1] << square[1] << endl;
-    // cout << square[2] << square[2] << square[2] << square[2] << square[2] << endl;
-    // cout << square[3] << square[3] << square[3] << square[3] << square[3] << endl;
-    // cout << square[4] << square[4] << square[4] << square[4] << square[4] << endl;
-    // cout << square[5] << square[5] << square[5] << square[5] << square[5] << endl;
-    // cout << square[6] << square[6] << square[6] << square[6] << square[6] << endl;
-    // cout << square[] << square[0] << square[0] << square[0] << square[0] << endl;
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = 0; j < 3; j++){
+            cin >> c[i];
+            c[i] = c[i] - 1;
+            if (answ[i][c[i]] == 1)
+
+            {
+                move[i] = j;
+                cout << "ты угодал" << endl;  
+                for (int k = 0; k < 3; k++)
+                {
+                    for (int l = 0; l < 7; l++)
+                    {
+                        for (int m = 0; m < 5; m++)
+                        {
+                            if(c[m] == k and m == move[m]){
+                                cout << squarewin[l];
+                            }else{
+                                cout << square[l];
+                            }
+                        }
+                        cout << "\n";
+                    }
+                }  
+                break;
+            }else{
+                lose = 1;
+                break;
+            }
+        }
+        if(lose == 1)
+            break;
+
+    }
                             	   	   	   	   	   	
 
     // cout << "|---------------||---------------||---------------||---------------||---------------|" << endl;
