@@ -44,26 +44,32 @@ int main()
     };
     srand(time(0));
 
-    for(int i = 0; i < 42; i++){
+    for(int i = 0; i < 52; i++){
         a[i] = rand() % 13 + 1;
         // cout << a[i] << endl;
     }
 
-        score1 = a[0];
-        cout << "Тебе выпала: " << a[0] << endl;
-        for(int i = 0; i < 10; i++){
-            for (int j = 0; j < 14; j++){
-                if (j == 3 and i == 2){
-                    card[i][j] = sign[a[0]] - 1;
-                }
-                if (j == 10 and i == 7){
-                    card[i][j] = sign[a[0] - 1];
-                }
-                cout << card[i][j];
-        }
-        cout << endl;    
+    score1 = a[0];
+    for(int i = 0; i < 13; i++){
+        for (int j = 0; j < 4; j++)
+            if (a[0] == deck[i][j]){
+                deck[i][j] = 0;
+            }
     }
-    for (int i = 0; i < 41; i++){
+    cout << "Тебе выпала: " << a[0] << endl;
+    for(int i = 0; i < 10; i++){
+        for (int j = 0; j < 14; j++){
+            if (j == 3 and i == 2){
+                card[i][j] = sign[a[0]] - 1;
+            }
+            if (j == 10 and i == 7){
+                card[i][j] = sign[a[0] - 1];
+            }
+            cout << card[i][j];
+    }
+    cout << endl;    
+    }
+    for (int i = 0; i < 52; i++){
         cout << "Будешь брать ещё?" << endl;
         cin >> b;
         if (b == 1){
