@@ -5,10 +5,30 @@
 // #include <stdlib.h>
 #include <cstdlib>
 
+#define RESET   "\033[0m"
+#define BLACK   "\033[30m"      /* Black */
+#define RED     "\033[31m"      /* Red */
+#define GREEN   "\033[32m"      /* Green */
+#define YELLOW  "\033[33m"      /* Yellow */
+#define BLUE    "\033[34m"      /* Blue */
+#define MAGENTA "\033[35m"      /* Magenta */
+#define CYAN    "\033[36m"      /* Cyan */
+#define WHITE   "\033[37m"      /* White */
+#define BOLDBLACK   "\033[1m\033[30m"      /* Bold Black */
+#define BOLDRED     "\033[1m\033[31m"      /* Bold Red */
+#define BOLDGREEN   "\033[1m\033[32m"      /* Bold Green */
+#define BOLDYELLOW  "\033[1m\033[33m"      /* Bold Yellow */
+#define BOLDBLUE    "\033[1m\033[34m"      /* Bold Blue */
+#define BOLDMAGENTA "\033[1m\033[35m"      /* Bold Magenta */
+#define BOLDCYAN    "\033[1m\033[36m"      /* Bold Cyan */
+#define BOLDWHITE   "\033[1m\033[37m"      /* Bold White */
+#define CLEAR u8"\033[2J\033[1;1H" /* clear console */
+
+
 using namespace std;
 
 
-void  Roulette(int round1[])
+void  Roulette(int round[])
 {
     string a[20] = {"\033[1;32m 00 \033[0m","\033[1;31m 1 \033[0m", "\033[1;34m 2 \033[0m", 
                     "\033[1;31m 3 \033[0m", "\033[1;31m 4 \033[0m", "\033[1;31m 5 \033[0m", 
@@ -17,9 +37,35 @@ void  Roulette(int round1[])
                     "\033[1;31m 12 \033[0m", "\033[1;31m 13 \033[0m", "\033[1;31m 14 \033[0m",
                     "\033[1;31m 15 \033[0m", "\033[1;31m 16 \033[0m", "\033[1;31m 17 \033[0m",
                     "\033[1;31m 18 \033[0m", "\033[1;31m 0 \033[0m"};
-    for(int i = 0; i < 20; i++){
-        for (int j = 0; j < 1; j++){
-            cout << round1[i] << endl;
+
+
+};
+
+void ways()
+{
+
+};
+
+int main()
+{
+// global var
+
+
+//Roulette
+    int balace = 1000;
+    int bid;
+    int round;
+
+    srand(time(0));
+    round = rand()  % 22;
+
+    cout << "Здравствуйте! В данный момент запустилась игра Рулетка" << endl;
+    cout << "Какую ставку вы хотите поставить? \n" << "Ваш баланс: " << balace <<  endl;
+    cin >> bid;
+    if(bid > 0){
+        cout << "Ваша ставка в размере:" << bid << " принята" << endl;
+        for (int i = 0; i < 1; i++){
+            // cout << round << endl;
             
             sleep(2);
             cout << "                 00                " << endl;
@@ -52,7 +98,7 @@ void  Roulette(int round1[])
             cout << "14               0                5" << endl;
             cout << "                                   " << endl;
             cout << " 15                              6 " << endl;
-            cout << "                                   " << endl;
+            cout << "                                   " << endl;  
             cout << "    16                       7     " << endl;
             cout << "                                   " << endl;
             cout << "         17               8        " << endl;
@@ -60,10 +106,11 @@ void  Roulette(int round1[])
             cout << "                  0                " << endl;
             sleep(1);
             system("clear");
-            if(round1[i] == 1){
+            if(round == 1){
                 cout << "АХАХАХАХАХАХАХА";
                 sleep(3);
                 break;
+
             }
             cout << "                 00                " << endl;
             cout << "             10        1  $        " << endl;
@@ -84,7 +131,7 @@ void  Roulette(int round1[])
             cout << "                  0                " << endl;
             sleep(1);
             system("clear");
-            if(round1[i] == 2){
+            if(round == 2){
                 cout << "АХАХАХАХАХАХАХА";
                 sleep(3);
                 break;
@@ -108,7 +155,7 @@ void  Roulette(int round1[])
             cout << "                  0                " << endl;
             sleep(1);
             system("clear");
-            if(round1[i] == 3){
+            if(round == 3){
                 cout << "АХАХАХАХАХАХАХА";
                 sleep(3);
                 break;
@@ -132,7 +179,7 @@ void  Roulette(int round1[])
             cout << "                  0                " << endl;
             sleep(1);
             system("clear");
-            if(round1[i] == 4){
+            if(round == 4){
                 cout << "АХАХАХАХАХАХАХА";
                 sleep(3);
                 break;
@@ -148,7 +195,7 @@ void  Roulette(int round1[])
             cout << "14                 0------>       5" << endl;
             cout << "                                   " << endl;
             cout << " 15                             6  " << endl;
-            cout << "                                       " << endl;
+            cout << "                                   " << endl;
             cout << "    16                       7     " << endl;
             cout << "                                   " << endl;
             cout << "         17               8        " << endl;
@@ -156,7 +203,7 @@ void  Roulette(int round1[])
             cout << "                  0                " << endl;
             sleep(1);
             system("clear");
-            if(round1[i] == 5){
+            if(round == 5){
                 cout << "АХАХАХАХАХАХАХА";
                 sleep(3);
                 break;
@@ -180,7 +227,7 @@ void  Roulette(int round1[])
             cout << "                  0                " << endl;
             sleep(1);
             system("clear");
-            if(round1[i] == 6){
+            if(round == 6){
                 cout << "АХАХАХАХАХАХАХА";
                 sleep(3);
                 break;
@@ -204,7 +251,7 @@ void  Roulette(int round1[])
             cout << "                  0                " << endl;
             sleep(1);
             system("clear");
-            if(round1[i] == 7){
+            if(round == 7){
                 cout << "АХАХАХАХАХАХАХА";
                 sleep(3);
                 break;
@@ -228,7 +275,7 @@ void  Roulette(int round1[])
             cout << "                  0                " << endl;
             sleep(1);
             system("clear");
-            if(round1[i] == 8){
+            if(round == 8){
                 cout << "АХАХАХАХАХАХАХА";
                 sleep(3);
                 break;
@@ -251,7 +298,7 @@ void  Roulette(int round1[])
             cout << "                  0    $           " << endl;
             sleep(1);
             system("clear");
-            if(round1[i] == 9){
+            if(round == 9){
                 cout << "АХАХАХАХАХАХАХА";
                 sleep(3); 
                 break;
@@ -275,7 +322,7 @@ void  Roulette(int round1[])
             cout << "                  0                " << endl;
             sleep(1);
             system("clear");
-            if(round1[i] == 0){
+            if(round == 0){
                 cout << "АХАХАХАХАХАХАХА";
                 sleep(3);
                 break;
@@ -299,7 +346,7 @@ void  Roulette(int round1[])
             cout << "              $    0               " << endl;
             sleep(1);
             system("clear");
-            if(round1[i] == 18){
+            if(round == 18){
                 cout << "АХАХАХАХАХАХАХА";
                 sleep(3);
                 break;
@@ -323,7 +370,7 @@ void  Roulette(int round1[])
             cout << "                  0                " << endl;
             sleep(1);
             system("clear");
-            if(round1[i] == 17){
+            if(round == 17){
                 cout << "АХАХАХАХАХАХАХА";
                 sleep(3);
                 break;
@@ -347,7 +394,7 @@ void  Roulette(int round1[])
             cout << "                  0                " << endl;
             sleep(1);
             system("clear");
-            if(round1[i] == 16){
+            if(round == 16){
                 cout << "АХАХАХАХАХАХАХА";
                 sleep(3);
                 break;
@@ -371,7 +418,7 @@ void  Roulette(int round1[])
             cout << "                  0                " << endl;
             sleep(1);
             system("clear");
-            if(round1[i] == 5){
+            if(round == 15){
                 cout << "АХАХАХАХАХАХАХА";
                 sleep(3);
                 break;
@@ -395,7 +442,7 @@ void  Roulette(int round1[])
             cout << "                  0                " << endl;
             sleep(1);
             system("clear");
-            if(round1[i] == 14){
+            if(round == 14){
                 cout << "АХАХАХАХАХАХАХА";
                 sleep(3);
                 break;
@@ -419,7 +466,7 @@ void  Roulette(int round1[])
             cout << "                  0                " << endl;
             sleep(1);
             system("clear");
-            if(round1[i] == 13){
+            if(round == 13){
                 cout << "АХАХАХАХАХАХАХА";
                 sleep(3);
                 break;
@@ -443,7 +490,7 @@ void  Roulette(int round1[])
             cout << "                  0                " << endl;
             sleep(1);
             system("clear");
-            if(round1[i] == 12){
+            if(round == 12){
                 cout << "АХАХАХАХАХАХАХА";
                 sleep(3);
                 break;
@@ -467,7 +514,7 @@ void  Roulette(int round1[])
             cout << "                  0                " << endl;
             sleep(1);
             system("clear");
-            if(round1[i] == 11){
+            if(round == 11){
                 cout << "АХАХАХАХАХАХАХА";
                 sleep(3);
                 break;
@@ -491,7 +538,7 @@ void  Roulette(int round1[])
             cout << "                  0                " << endl;
             sleep(1);
             system("clear");
-            if(round1[i] == 10){
+            if(round == 10){
                 cout << "АХАХАХАХАХАХАХА";
                 sleep(3);
                 break;
@@ -513,77 +560,19 @@ void  Roulette(int round1[])
             cout << "         17               8        " << endl;
             cout << "             18        9           " << endl;
             cout << "                  0                " << endl;
-            if (round1[1] == 21){
+            if (round == 21){
                 cout << "АХАХАХАХАХАХАХА";
                 sleep(3);
                 break;
             }
     }
-    }
-
-};
-
-void ways()
-{
-
-};
-
-int main()
-{
-// global var
-    int balace = 1000;
-    int bid;
-
-
-//Roulette
-
-    int num[19];
-    int random1[50]; 
-    int round[20];
-    int zero[2] = {1, 2};
-    int a;
-    int b;
-    int c;
-    int d;
-    for (int i = 0; i < 19; i++)
-    {
-        num[i] = i;
-    }
-
-    for(int i = 0; i < 51; i++)
-    {
-        random1[i] = i;
-        cout << random1[i] << "\t";
-    }
-    srand(time(0));
-    a = rand() % 50 + 1 ;
-    c = rand() % 20 + 1;
-    d = rand() % 2 +1;
-    for (int i = 0; i < 5; i++)
-        b = rand() % 50 +1;
-
-    for (int i=0; i < 20; ++i)
-    {
-        round[i] = rand() % 20 + 1;
-	}
-    if(a == b)
-    {
-        if(zero[0] == d){
-        round[c] = 0;
-        }else{
-            round[c] = 21;
-        }
-
-    }
-    cout << "Здравствуйте! В данный момент запустилась игра Рулетка" << endl;
-    cout << "Какую ставку вы хотите поставить? \n" << "Ваш баланс: " << balace <<  endl;
-    cin >> bid;
-    if(bid > 0){
-        cout << "Ваша ставка в размере:" << bid << " внутриигров0й валиты принята" << endl;
+    
     }else {
         cout << "Похоже вы поставили ничего. В таком случает вы не можете играть" << endl;
-     }
-    Roulette(round);
+    }
+
+        
+    
 
 
 //Twenty one

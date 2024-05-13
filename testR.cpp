@@ -101,10 +101,10 @@ int main(){
     cout << A17 << endl;
 
     // cout << A[0]<< endl;
-            cout << "                 " << a[0] << "                             " << endl;
-            cout << "           " << a[10] <<"        " << a[1] <<"              " << endl;
-            cout << "       " << a[11] << "                " << a[2] << "        " << endl;
-            cout << "                                                            " << endl;
+            // 1cout << "                 " << a[0] << "                             " << endl;
+            // 2cout << "           " << a[10] <<"        " << a[1] <<"              " << endl;
+            // 3cout << "       " << a[11] << "                " << a[2] << "        " << endl;
+            // 4cout << "                                                            " << endl;
             cout << "   " << a[12] << "                        " << a[3] << "    " << endl;
             cout << "                  ^                                         " << endl;
             cout << " " << a[13] << "             |              " << a[4] <<"   " << endl;
